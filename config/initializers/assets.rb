@@ -1,4 +1,5 @@
 # Be sure to restart your server when you modify this file.
+Rails.application.config.session_store :cookie_store, key: '_your_app_session'
 
 # Version of your assets, change this if you want to expire all your assets.
 Rails.application.config.assets.version = '1.0'

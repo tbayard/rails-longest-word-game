@@ -1,0 +1,15 @@
+
+<div class="container">
+<h1>New game</h1>
+  <ul class="list-inline d-flex justify-content-between">
+    <% @letters.each do |letter| %>
+      <li class="list-inline-item text-light"><span class="border px-3 py-2 bg-primary"><%= letter %></span></li>
+    <% end %>
+  </ul>
+  <form action="/score" method="post">
+    <input type="input" name="word" placeholder="Type your word">
+    <input type="submit">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <%= hidden_field_tag :letters, @letters %>
+  </form>
+</div>
